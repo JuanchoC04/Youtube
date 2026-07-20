@@ -187,8 +187,6 @@ button {
   display: grid;
   grid-template-columns: 240px 1fr;
   margin-top: 56px;
-  /* Para que el contenido no se tape por el nav fijo */
-  height: calc(100vh - 56px);
 }
 
 /* COLUMNA 1: MENÚ LATERAL VERTICAL */
