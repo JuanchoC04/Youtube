@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube</title>
+  <link rel="stylesheet" href="youtube.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<style>
+  .fondologo {
+    position: absolute;
+    z-index: -1;
+    top: 22px;
+    left: 30px;
+    width: 13px;
+    height: 13px;
+    background-color: #ffffff;
+    margin-left: 40px;
+    border-radius: 4px;
+
+  }
+</style>
+
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <nav class="barra-navegacion">
+    <!-- Grid Izquierdo (Menú de 3 líneas y Logo) -->
+    <div class="nav-izquierda">
+      <button class="boton-icono-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="youtube-logo">
+        <i class="fa-brands fa-youtube logo-youtube"></i>
+        <div>YouTube</div>
+        <div><span>VE</span></div>
+        <div class="fondologo"></div>
+      </div>
+    </div>
+
+    <!-- Grid Central -->
+    <div class="nav-centro">
+      <div class="caja-busqueda">
+        <input type="text" placeholder="Buscar">
+        <button class="boton-buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <button class="boton-icono-micro"><i class="fa-solid fa-microphone"></i></button>
+    </div>
+
+    <!-- Gird Derecho -->
+    <div class="nav-derecha">
+      <button class="boton-icono-menu boton-crear"><i class="fa-solid fa-plus"></i>
+        <span>Crear</span>
+      </button>
+      <button class="boton-icono-menu"><i class="fa-solid fa-bell"></i></button>
+      <div class="avatar-usuario"><img
+          src="https://yt3.ggpht.com/hdWbw0tlkYsqXGRG1hJYbCKC5I1kLfvMl3XQ1ZWIVMz9UcRB71Gigv-lGkUpT8Wz76nMwYjVaw=s108-c-k-c0x00ffffff-no-rj"
+          alt="foto perfil"></div>
+    </div>
+  </nav>
+  <!--Aquí termina la parte superior y empieza la sección de menú lateral y videos-->
+
+  <!-- Grid principal de 2 columnas-->
+  <section class="contenedor-principal">
+
+    <!-- Columna 1: Menú lateral -->
+    <div class="menu-lateral">
+      <a href="#" class="enlace-menu activo"><i class="fa-solid fa-house"></i> <span>Inicio</span></a>
+      <a href="#" class="enlace-menu"><i class="fa-solid fa-bolt"></i> <span>Shorts</span></a>
+      <a href="#" class="enlace-menu"><i class="fa-solid fa-clapperboard"></i> <span>Suscripciones</span></a>
+      <hr class="separador">
+      <a href="#" class="enlace-menu"><i class="fa-solid fa-clock-rotate-left"></i> <span>Historial</span></a>
+      <a href="#" class="enlace-menu"><i class="fa-solid fa-list"></i> <span>Listas</span></a>
+      <a href="#" class="enlace-menu"><i class="fa-solid fa-thumbs-up"></i> <span>Videos gustados</span></a>
+    </div>
+
+    <!-- Columna 2: sección de contenido -->
+    <div class="seccion-contenido">
+
+      <!-- Fila superior de tendencias -->
+      <div class="barra-tendencias">
+        <button class="etiqueta activo">Todos</button>
+        <button class="etiqueta">Videojuegos</button>
+        <button class="etiqueta">Música</button>
+        <button class="etiqueta">Diseño Gráfico</button>
+        <button class="etiqueta">Mixes</button>
+        <button class="etiqueta">En vivo</button>
+        <button class="etiqueta">Programación</button>
+      </div>
+
+      <!-- Columna de videos  -->
+      <div class="grid-videos">
+
+        <!-- VIDEO 1 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a href="https://www.youtube.com/watch?v=3yBIIuAFLBg"><img
+                src="https://i.ytimg.com/vi/3yBIIuAFLBg/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA0GQXPW_pje-lc8FWAaoi1_SJZQA"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">12:45</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@dtfmexico"><img
+                  src="https://yt3.googleusercontent.com/8JeSh8mNfGM_di0OTeC5i_kaQ42sYoZh0AToJi2xXhoeQ0EigZnXzJPjr9BJGdGYXLzG8FzeSA=s160-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a href="https://www.youtube.com/watch?v=3yBIIuAFLBg">🤯¡POR FIN! Semitonos en Affinity | La PRUEBA
+                  que Confirma su Calidad | 🟠DTFMEXICO.MX</a></h3>
+              <a href="https://www.youtube.com/@dtfmexico">
+                <p class="nombre-canal">DTFMexico.MX <i class="fa-solid fa-circle-check"></i></p>
+              </a>
+              <p class="vistas-fecha">15k vistas • hace 3 días</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO 2 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a href="https://www.youtube.com/watch?v=w6br86MoOUA"><img
+                src="https://i.ytimg.com/vi/w6br86MoOUA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAhabPG4QVoYtthUOE3EYq5dT2lFQ"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">30:00</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@MotionNations"><img
+                  src="https://yt3.ggpht.com/zS-OyOw478WLUTa5vygenEsDzT3j8ck5z-gKd1atBCQui3VGVPAmqSWN8PYXvYfJmmZjEhdaYQ=s48-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a href="https://www.youtube.com/watch?v=w6br86MoOUA">OMG! New After Effects Update is CRAZY - 3D
+                  Product Pop Animation | After Effects Tutorial</a></h3>
+              <a href="https://www.youtube.com/@MotionNations">
+                <p class="nombre-canal">Motion Nations</p>
+              </a>
+              <p class="vistas-fecha">102k vistas • hace 3 semanas</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO 3 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a href="https://www.youtube.com/watch?v=HPVbgI7uRcA"><img
+                src="https://i.ytimg.com/vi/HPVbgI7uRcA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA9ItqSzle-o1Th9angEpvjsIq_TA"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">16:30</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@Toniki"><img
+                  src="https://yt3.ggpht.com/MpkXXcFKy25s9USnlAUPP0ifQYOuDJ7l9WhRhMzCelZJYYe1xGCGOkl5qSbp_JarRVfCT2a5qw=s48-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a href="https://www.youtube.com/watch?v=HPVbgI7uRcA">
+                  Mejores y Peores Héroes de la Season 3 de Overwatch</a></h3>
+              <a href="https://www.youtube.com/@Toniki">
+                <p class="nombre-canal">Toniki</p>
+              </a>
+              <p class="vistas-fecha">145k vistas • hace 2 semanas</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO 4 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a href="https://www.youtube.com/watch?v=5RN8do7-8x8"><img
+                src="https://i.ytimg.com/vi/5RN8do7-8x8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLARiUQAbaBqgg_4VDLanUOSyM5r8Q"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">26:45</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@nanutria"><img
+                  src="https://yt3.ggpht.com/ytc/AIdro_l-5hcEDp2F9G5A64YS0wN4J8_W6cypahyZqN1I_P1vAlI=s68-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a href="https://www.youtube.com/watch?v=5RN8do7-8x8">El Showcito De Nanutria: La policía de Madrid y
+                  los cerrajeros.</a></h3>
+              <a href="https://www.youtube.com/@nanutria">
+                <p class="nombre-canal">nanutria <i class="fa-solid fa-circle-check"></i></p>
+              </a>
+              <p class="vistas-fecha">1 M vistas • hace 2 minuticos</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO 5 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a
+              href="https://www.youtube.com/watch?v=kbt6akuGt20&list=RDGMEMHDXYb1_DDSgDsobPsOFxpAVMkbt6akuGt20&start_radio=1"><img
+                src="https://i.ytimg.com/vi/kbt6akuGt20/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDpvesBvtOg2q-KW7XSI0LzfrlhYw"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">24:50</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@Habeatat"><img
+                  src="https://yt3.ggpht.com/4wVE0AQFtUpDQ8EIbz43nWbu8L_ERWh47xhtOX3TaN78B_mczSGrbKTS-7q2DJxVbnEqPtJr6pc=s48-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a
+                  href="https://www.youtube.com/watch?v=kbt6akuGt20&list=RDGMEMHDXYb1_DDSgDsobPsOFxpAVMkbt6akuGt20&start_radio=1">
+                  Canserbero Feat Mcklopedia - El Purgatorio - TRAP MUSIC VOL 1 (Canción Oficial)</a></h3>
+              <a href="https://www.youtube.com/@Habeatat">
+                <p class="nombre-canal">Habeatat</p>
+              </a>
+              <p class="vistas-fecha">2.5 M vistas • hace 3 minuticos</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO 6 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a href="https://www.youtube.com/watch?v=ktxH-lN_tiQ"><img
+                src="https://i.ytimg.com/vi/ktxH-lN_tiQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDoq7OszT2_Lv6M0BTlHTTIFoetgQ"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">15:45</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@kurzgesagt_es"><img
+                  src="https://yt3.ggpht.com/ytc/AIdro_nBMZVFA7nkIFmtpBgbz0LE59y9wmj9AusPTlzeUhW3DA=s48-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a
+                  href="https://www.youtube.com/watch?v=kbt6akuGt20&list=RDGMEMHDXYb1_DDSgDsobPsOFxpAVMkbt6akuGt20&start_radio=1">
+
+
+                  ¿Qué es la vida? ¿Es la muerte real?
+                </a></h3>
+              <a href="https://www.youtube.com/@kurzgesagt_es">
+                <p class="nombre-canal">
+                  En Pocas Palabras – Kurzgesagt
+                </p>
+              </a>
+              <p class="vistas-fecha">1 M vistas • hace 3 días</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO 7 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a href="https://www.youtube.com/watch?v=nDgHmNHViKA"><img
+                src="https://i.ytimg.com/vi/nDgHmNHViKA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDy1MAi6GHGEtM4BmoUJ20xGZ1SOQ"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">21:15</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@nanutria"><img
+                  src="https://yt3.ggpht.com/ytc/AIdro_l-5hcEDp2F9G5A64YS0wN4J8_W6cypahyZqN1I_P1vAlI=s48-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a href="https://www.youtube.com/watch?v=nDgHmNHViKA">
+                  La Balada Del Migrante - Especial de Stand Up - Nanutria
+                </a></h3>
+              <a href="https://www.youtube.com/@nanutria">
+                <p class="nombre-canal">
+                  nanutria <i class="fa-solid fa-circle-check"></i>
+                </p>
+              </a>
+              <p class="vistas-fecha">953k vistas • hace ratico</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO 8 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a
+              href="https://www.youtube.com/watch?v=Y4TGGrs0nZI&list=RDY4TGGrs0nZI&start_radio=1&pp=ygUFeWVndWGgBwE%3D"><img
+                src="https://i.ytimg.com/vi/nLYeGXd53K0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDeTbAqNxCEUays0vJxrx9mnwefFA"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">4:35</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@babasonicos"><img
+                  src="https://yt3.ggpht.com/Ds82nhxE2WJcX-Os6WdukiLxF0bpQ0tbbsM4KkKykYZ0XN63griRHKk-vauK26l6ZbGArcLIuw=s48-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a
+                  href="https://www.youtube.com/watch?v=Y4TGGrs0nZI&list=RDY4TGGrs0nZI&start_radio=1&pp=ygUFeWVndWGgBwE%3D">
+                  Babasónicos - Yegua
+                </a></h3>
+              <a href="https://www.youtube.com/@babasonicos">
+                <p class="nombre-canal">
+                  Babasonicos
+                </p>
+              </a>
+              <p class="vistas-fecha">53 M vistas • hace 10 años</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO 9 -->
+        <div class="tarjeta-video">
+          <!-- 1er DIV: Miniatura -->
+          <div class="video-miniatura">
+            <a href="https://www.youtube.com/watch?v=UP-Oe-XMahk&pp=ugUEEgJlbg%3D%3D"><img
+                src="https://i.ytimg.com/vi/UP-Oe-XMahk/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDckDKivJjM_qCIX7ocW6n5_C1r9w"
+                alt="Miniatura del video"></a>
+            <span class="duracion-video">21:01</span>
+          </div>
+
+          <!-- 2do DIV: Información con display Grid de 3 columnas -->
+          <div class="video-info-grid">
+            <!-- Columna Grid 1  avatar del canañl -->
+            <div class="canal-avatar"> <a href="https://www.youtube.com/@IcemanBry"><img
+                  src="https://yt3.ggpht.com/a4yWTdDGAVmPdlY3vMcP0i7V0VvWSmkjpm7JYm8vNycL_907mCqAupN6f_RlyEAbJFizFmKKEw=s48-c-k-c0x00ffffff-no-rj"
+                  alt="avatar"></a>
+            </div>
+
+            <!-- Columna Grid 2 Título y textos del video -->
+            <div class="video-detalles">
+              <h3><a href="https://www.youtube.com/watch?v=UP-Oe-XMahk">
+
+                  OVERWATCH.EXE
+                </a></h3>
+              <a href="https://www.youtube.com/@IcemanBry">
+                <p class="nombre-canal">
+                  IcemanBry
+                </p>
+              </a>
+              <p class="vistas-fecha">147 k vistas • hace 3 meses</p>
+            </div>
+
+            <!-- Columna Grid 3 puntitos -->
+            <button class="boton-opciones">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      </main>
+
+  </section>
+
+</body>
+
+</html>

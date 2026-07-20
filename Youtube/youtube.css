@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* BARRA DE NAVEGACIÓN SUPERIOR */
+
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f0f0f;
+  padding: 0 16px;
+  height: 56px;
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Bloque izquierdo líneas de menú y Logo */
+.nav-izquierda {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.boton-icono-menu {
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+
+.boton-icono-menu:hover {
+  background-color: #272727;
+}
+
+.youtube-logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.logo-youtube {
+  color: #ff0000;
+  font-size: 24px;
+}
+
+.youtube-logo div span {
+  font-size: 10px;
+  font-weight: 500;
+  color: #919191;
+  position: absolute;
+  top: 12px;
+
+}
+
+/* Bloque Central Buscador */
+.nav-centro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 40%;
+  max-width: 600px;
+}
+
+.caja-busqueda {
+  display: flex;
+  width: 100%;
+  border: 1px solid #303030;
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: #222222;
+}
+
+.caja-busqueda input {
+  width: 100%;
+  background: #121212;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  font-size: 16px;
+}
+
+.caja-busqueda input:focus {
+  outline: 1px solid #1c62b9;
+}
+
+.boton-buscar {
+  background-color: #222222;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.boton-icono-micro {
+  background-color: #1f1f1f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.boton-crear {
+  font-size: 18px;
+  padding: 16px;
+  border-radius: 20px;
+
+}
+
+.nav-derecha {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.avatar-usuario {
+  width: 32px;
+  height: 32px;
+  background-color: #555555;
+  border-radius: 50%;
+}
+
+.avatar-usuario img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/*Grid principal de 2 columnas*/
+.contenedor-principal {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  margin-top: 56px;
+  /* Para que el contenido no se tape por el nav fijo */
+  height: calc(100vh - 56px);
+}
+
+/* COLUMNA 1: MENÚ LATERAL VERTICAL */
+.menu-lateral {
+  padding: 12px;
+  background-color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.enlace-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.enlace-menu i {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.enlace-menu:hover {
+  background-color: #272727;
+}
+
+.enlace-menu.activo {
+  background-color: #272727;
+  font-weight: bold;
+}
+
+.separador {
+  border: none;
+  border-top: 1px solid #272727;
+  margin: 12px 0;
+}
+
+/* COLUMNA 2: SECCIÓN DE VIDEOSS*/
+.seccion-contenido {
+  background-color: #0f0f0f;
+  padding: 24px;
+}
+
+/* FILA SUPERIOR: TENDENCIAS / FILTROS */
+.barra-tendencias {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  overflow-x: scroll;
+}
+
+.barra-tendencias::-webkit-scrollbar {
+  display: none;
+  /* Oculta la barra de desplazamiento de los filtros */
+}
+
+.etiqueta {
+  background-color: #272727;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.etiqueta:hover {
+  background-color: #3f3f3f;
+}
+
+.etiqueta.activo {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Grid principal de videos con 3 columnas*/
+
+.grid-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 3px;
+  width: 100%;
+}
+
+
+
+/* display flex column con 2 DIV */
+.tarjeta-video {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 10px;
+  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.tarjeta-video:hover {
+  cursor: pointer;
+  background-color: #303030;
+  border-radius: 10px;
+  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+  transform: scale(1.02);
+}
+
+
+/* 1er DIV: MINIATURA DE VIDEO */
+.video-miniatura {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #272727;
+}
+
+.video-miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.duracion-video {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* 2do DIV CON DISPLAY GRID DE 3 COLUMNAS (ÍCONO, TÍTULO Y BOTÓN) */
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 36px 1fr 24px;
+  gap: 12px;
+}
+
+/* Colunma Grid 1 */
+.canal-avatar {
+  width: 36px;
+  height: 36px;
+  background-color: #777777;
+  border-radius: 50%;
+}
+
+.canal-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Columna Grid 2 */
+.video-detalles h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  /* Corta el texto con puntos suspensivos si pasa de 2 líneas */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-detalles a {
+
+  color: white;
+  text-decoration: none;
+
+}
+
+.video-detalles a i {
+  color: #bababa;
+  font-size: 10px;
+  margin: 4px 0;
+}
+
+.nombre-canal,
+.vistas-fecha {
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.4;
+}
+
+.nombre-canal:hover {
+  color: #fff;
+}
+
+/* Columna Grid 3 */
+.boton-opciones {
+  align-items: center;
+  font-size: 14px;
+  color: #ffffff;
+  height: 24px;
+}
+
+.boton-opciones:hover {
+  border-radius: 50%;
+  background-color: #7b7b7b;
+}
+
+
+/* Responsive para teléfonos */
+
+@media (max-width: 768px) {
+
+  /* Modificamos el Grid principal para ocultar el menú vertical en pantallas pequeñas */
+  .contenedor-principal {
+    grid-template-columns: 1fr;
+    /* El contenido ocupa todo el ancho */
+  }
+
+  .menu-lateral {
+    display: none;
+    /* Ocultamos el menú lateral */
+  }
+
+  .seccion-contenido {
+    padding: 12px;
+  }
+
+  /* videos de 3 columnas a 1 sola columna */
+  .grid-videos {
+    grid-template-columns: 1fr;
+    gap: 32px 0;
+  }
+
+
+}
