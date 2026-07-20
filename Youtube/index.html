@@ -10,11 +10,12 @@
 </head>
 
 <style>
+  /*esto es un cuadrito para rellenar la parte faltante del logo */
   .fondologo {
     position: absolute;
     z-index: -1;
     top: 22px;
-    left: 30px;
+    left: 35px;
     width: 13px;
     height: 13px;
     background-color: #ffffff;
@@ -34,10 +35,14 @@
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="youtube-logo">
-        <i class="fa-brands fa-youtube logo-youtube"></i>
-        <div>YouTube</div>
-        <div><span>VE</span></div>
-        <div class="fondologo"></div>
+        <a href="https://www.youtube.com/">
+          <i class="fa-brands fa-youtube logo-youtube"></i>
+          <div>YouTube</div>
+          <div><span>VE</span></div>
+          <div class="fondologo"></div>
+        </a>
+
+        </button>
       </div>
     </div>
 
@@ -47,12 +52,13 @@
         <input type="text" placeholder="Buscar">
         <button class="boton-buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
+      <button class="boton-buscar-tlf"><i class="fa-solid fa-magnifying-glass"></i></button>
       <button class="boton-icono-micro"><i class="fa-solid fa-microphone"></i></button>
     </div>
 
     <!-- Gird Derecho -->
     <div class="nav-derecha">
-      <button class="boton-icono-menu boton-crear"><i class="fa-solid fa-plus"></i>
+      <button class="boton-icono-crear"><i class="fa-solid fa-plus"></i>
         <span>Crear</span>
       </button>
       <button class="boton-icono-menu"><i class="fa-solid fa-bell"></i></button>
@@ -72,9 +78,25 @@
       <a href="#" class="enlace-menu"><i class="fa-solid fa-bolt"></i> <span>Shorts</span></a>
       <a href="#" class="enlace-menu"><i class="fa-solid fa-clapperboard"></i> <span>Suscripciones</span></a>
       <hr class="separador">
+      <a href="https://www.youtube.com/@CDCVISION" class="canal"><img
+          src="https://yt3.ggpht.com/m04f186dUOSXqh88v2MUfgQW8LqJPAsWJPbK7cKeomKdE5xVRstCWWkUpMEkF1gh6wp-QN1wdw=s88-c-k-c0x00ffffff-no-rj"
+          alt="avatar"> <span>Caramelos de Cianuro</span></a>
+      <a href="https://www.youtube.com/@marcocreativo" class="canal"><img
+          src="https://yt3.ggpht.com/j9rabejBRml4LbXzPeLW_3MBuKkhBtmu64bgcwiKdHIE9UQPTwyUNPTJHQ3VJxkJSkg8-1iupg=s88-c-k-c0x00ffffff-no-rj"
+          alt="avatar"> <span>Marco Creativo</span></a>
+      <a href="https://www.youtube.com/@OverwatchLatAm" class="canal"><img
+          src="https://yt3.ggpht.com/lsHl4HxFAmQijS9gIjPe2meYReuX2iilVRQHy_QeYuvCsJBeSmsqkEFdOzWH9WhbWYes_De2UQ=s88-c-k-c0x00ffffff-no-rj"
+          alt="avatar"> <span>Overwatch Latam</span></a>
+      <a href="https://www.youtube.com/@ElCanserberoOficial" class="canal"><img
+          src="https://yt3.ggpht.com/ytc/AIdro_k-4QVsR-WQeA7GOYGvE3XPjydLYHJa-mt4_V_5d4Dxu4U=s88-c-k-c0x00ffffff-no-rj"
+          alt="avatar"> <span>Canserbero</span></a>
+      <a href="https://www.youtube.com/@viegasestudio" class="canal"><img
+          src="https://yt3.ggpht.com/lu9Iq7kZsMDZJASUTVOjvaxZQFkU-sdb1y0Z85rdgLnpKDaW8rGnccLWbJ8GafCHHL7Oj-hUQg=s88-c-k-c0x00ffffff-no-rj"
+          alt="avatar"> <span>Viegas estudio</span></a>
+      <hr class="separador">
       <a href="#" class="enlace-menu"><i class="fa-solid fa-clock-rotate-left"></i> <span>Historial</span></a>
       <a href="#" class="enlace-menu"><i class="fa-solid fa-list"></i> <span>Listas</span></a>
-      <a href="#" class="enlace-menu"><i class="fa-solid fa-thumbs-up"></i> <span>Videos gustados</span></a>
+      <a href="#" class="enlace-menu"><i class="fa-solid fa-thumbs-up"></i> <span>Videos que me gustan</span></a>
     </div>
 
     <!-- Columna 2: sección de contenido -->
@@ -261,7 +283,7 @@
               <a href="https://www.youtube.com/@Habeatat">
                 <p class="nombre-canal">Habeatat</p>
               </a>
-              <p class="vistas-fecha">2.5 M vistas • hace 3 minuticos</p>
+              <p class="vistas-fecha">2.5 M vistas • hace 11 años</p>
             </div>
 
             <!-- Columna Grid 3 puntitos -->
